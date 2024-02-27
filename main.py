@@ -89,12 +89,12 @@ def skrypt8():
 
 
 if __name__ == '__main__':
-   #skrypt1()
-   #skrypt2()
-   #skrypt3()
-   #skrypt4()
-   #skrypt5()
-   #skrypt6()
-   #skrypt7()
+   skrypt1()
+   skrypt2()
+   skrypt3()
+   skrypt4()
+   skrypt5()
+   skrypt6()
+   skrypt7()
    skrypt8()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
