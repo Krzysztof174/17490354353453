@@ -58,6 +58,23 @@ def skrypt5():
       licznik += 1
 
 def skrypt6():
+   lista = [2, 5.4, 6, 6.7]
+   nowa_lista = []
+   for i in lista:
+      nowa_lista.append(i**2)
+   print(nowa_lista)
+
+def skrypt7():
+   licznik = 0
+   lista = []
+   while licznik != 10:
+      a = int(input('podaj liczbe'))
+      if a%2 == 0:
+         lista.append(a)
+      licznik += 1
+   print(lista)
+
+def skrypt8():
 
 
 if __name__ == '__main__':
@@ -65,5 +82,8 @@ if __name__ == '__main__':
    #skrypt2()
    #skrypt3()
    #skrypt4()
-   skrypt5()
+   #skrypt5()
+   #skrypt6()
+   #skrypt7()
+   skrypt8()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
