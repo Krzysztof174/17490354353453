@@ -1,11 +1,5 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
 import sys
-# Press the green button in the gutter to run the script.
+
 def skrypt1():
    zdanie = input('podaj zdanie')
    ilosc = len(zdanie.split())
@@ -75,6 +69,23 @@ def skrypt7():
    print(lista)
 
 def skrypt8():
+   lista = [12, 'kajak', 5.2, 'ala ma kota', 5, 3, 9, 'kajak', 5.2, 3, 3]
+   slownik = {}
+   for i in range(0, len(lista)):
+      if lista[i] in slownik:
+         powtorzenia = slownik[lista[i]]
+         slownik.update({lista[i]: powtorzenia + 1})
+         continue
+      slownik.update({lista[i]: 1})
+   print(slownik)
+
+   do_usuniecia = []
+   for key, value in slownik.items():
+      if not isinstance(key, int):
+         do_usuniecia.append(key)
+   for i in range(0, len(do_usuniecia)):
+      slownik.pop(do_usuniecia[i])
+   print(slownik)
 
 
 if __name__ == '__main__':
