@@ -35,7 +35,7 @@ def zad4(a, b, c):
 def zad5(a=3, b=5, h=3):
     print("pole trapezu: ", (a+b)*h/2)
 
-def zad6(a=1, b=4, ile=2):
+def zad6(a=1, b=4, ile=10):
     iloczyn = 1;
     for i in range(1, ile):
         iloczyn = iloczyn * a * b**i
