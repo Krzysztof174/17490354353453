@@ -1,100 +1,61 @@
 import sys
+import random
+import math
 
-def skrypt1():
-   zdanie = input('podaj zdanie')
-   ilosc = len(zdanie.split())
-   print(ilosc)
+def zad1():
+    A = [1-x for x in range(1, 11)]
+    B = [4**i for i in range(0,8)]
+    C = [x for x in B if x%2 == 0]
+    print(A, B, C)
 
-def skrypt2():
-   sys.stdout.write('podaj a')
-   a = int(sys.stdin.readline())
-   sys.stdout.write('podaj b')
-   b = int(sys.stdin.readline())
-   sys.stdout.write('podaj c')
-   c = int(sys.stdin.readline())
-   print((a**b) +c)
+def zad2():
+    listy1 = []
+    for i in range(1, 11):
+        listy1.append(math.floor(10*random.random()))
+    listapar = [i for i in listy1 if i%2 == 0]
+    print(listapar)
 
-def skrypt3():
-   palindrom = input('podaj napis')
+def zad3():
+    produkty = {"mleko": "litr", "jajka": "sztuka", "mieso": "kg", "batony": "sztuka"}
+    sztuki = { k:v for k,v in produkty.items() if v == "sztuka"}
+    print(sztuki)
 
-   if(palindrom == palindrom[::-1]):
-      print('jest palindromem')
+def zad4(a, b, c):
+    if (a**2 + b**2) == c**2:
+        print("jest trojkatny")
+        return
+    if (a**2 + c**2) == b**2:
+        print("jest trojkatny")
+        return
+    if (b**2 + c**2) == a**2:
+        print("jest trojkatny")
+        return
+    print("nie jest trojkatny")
+    
+def zad5(a=3, b=5, h=3):
+    print("pole trapezu: ", (a+b)*h/2)
 
-   odwrotne = ''
-   for i in range(0, len(palindrom)):
-      odwrotne += palindrom[len(palindrom) - 1 - i]
-   if(palindrom == odwrotne):
-      print('jest palindromem')
+def zad6(a=1, b=4, ile=2):
+    iloczyn = 1;
+    for i in range(1, ile):
+        iloczyn = iloczyn * a * b**i
+    print(iloczyn)
 
-def skrypt4():
-   liczba = int(input('podal liczbe'))
-   pierwsza = True
-   if(liczba == 2):
-      return print('jest liczba pierwsza')
-   for i in range(2, liczba):
-      if(liczba%i == 0):
-         pierwsza = False
-   if(pierwsza):
-      print('jest liczba pierwsza')
-
-def skrypt5():
-   licznik = 1
-   while licznik != 1000:
-      dzielniki = []
-      for i in range(1, licznik):
-         if licznik%i == 0:
-            dzielniki.append(i)
-      suma = 0
-      for i in range(0, len(dzielniki)):
-         suma += dzielniki[i]
-      if suma == licznik:
-         print(licznik)
-      licznik += 1
-
-def skrypt6():
-   lista = [2, 5.4, 6, 6.7]
-   nowa_lista = []
-   for i in lista:
-      nowa_lista.append(i**2)
-   print(nowa_lista)
-
-def skrypt7():
-   licznik = 0
-   lista = []
-   while licznik != 10:
-      a = int(input('podaj liczbe'))
-      if a%2 == 0:
-         lista.append(a)
-      licznik += 1
-   print(lista)
-
-def skrypt8():
-   lista = [12, 'kajak', 5.2, 'ala ma kota', 5, 3, 9, 'kajak', 5.2, 3, 3]
-   slownik = {}
-   for i in range(0, len(lista)):
-      if lista[i] in slownik:
-         powtorzenia = slownik[lista[i]]
-         slownik.update({lista[i]: powtorzenia + 1})
-         continue
-      slownik.update({lista[i]: 1})
-   print(slownik)
-
-   do_usuniecia = []
-   for key, value in slownik.items():
-      if not isinstance(key, int):
-         do_usuniecia.append(key)
-   for i in range(0, len(do_usuniecia)):
-      slownik.pop(do_usuniecia[i])
-   print(slownik)
-
-
+def zad7():
+    liczba = int(input("podaj liczbe: "))
+    try: {
+    print("pierwiastek: ", math.sqrt(liczba))
+    }
+    except: {
+    print("pierwiastek ujemny")
+    }
+    
 if __name__ == '__main__':
-   skrypt1()
-   skrypt2()
-   skrypt3()
-   skrypt4()
-   skrypt5()
-   skrypt6()
-   skrypt7()
-   skrypt8()
+    #zad1()
+    #zad2()
+    zad3()
+    zad4(6,8,10)
+    zad5()
+    zad6()
+    zad7()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
