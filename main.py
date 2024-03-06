@@ -51,8 +51,8 @@ def zad7():
     }
     
 if __name__ == '__main__':
-    #zad1()
-    #zad2()
+    zad1()
+    zad2()
     zad3()
     zad4(6,8,10)
     zad5()
