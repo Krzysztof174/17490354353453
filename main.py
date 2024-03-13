@@ -3,59 +3,55 @@ import random
 import math
 
 def zad1():
-    A = [1-x for x in range(1, 11)]
-    B = [4**i for i in range(0,8)]
-    C = [x for x in B if x%2 == 0]
-    print(A, B, C)
+    print( round(( math.e**4 - math.log2(34) )**(1/3), 2))
+    print( round(( math.log(20) + math.cos(45) + math.e )**(1/3), 2))
+    print( round(( math.log(20, 3) + math.sin(45) * 5/8 )**(1/4), 2))
+    print( round(math.log(23, 3) + (math.sin(45) +5)**(1/3), 2) )
+    print(round( ( math.log(32, 2) + math.pi + math.sin(56) )**(1/4), 2))
 
 def zad2():
-    listy1 = []
-    for i in range(1, 11):
-        listy1.append(math.floor(10*random.random()))
-    listapar = [i for i in listy1 if i%2 == 0]
-    print(listapar)
+    wysokosc = 0
+    try:
+        wysokosc = int(input("podaj wysokosc wiezy"))
+    except:
+        print("trzeba podac liczbe")
+        wysokosc = 0
+    if(wysokosc == 0):
+        return
+    if(wysokosc > 10):
+        return print("zbyt duza wysokosc") 
+    for i in range(1, wysokosc +1):
+        print("A"*i)
 
 def zad3():
-    produkty = {"mleko": "litr", "jajka": "sztuka", "mieso": "kg", "batony": "sztuka"}
-    sztuki = { k:v for k,v in produkty.items() if v == "sztuka"}
-    print(sztuki)
-
-def zad4(a, b, c):
-    if (a**2 + b**2) == c**2:
-        print("jest trojkatny")
+    wysokosc = 0
+    try:
+        wysokosc = int(input("podaj wysokosc wiezy"))
+    except:
+        print("trzeba podac liczbe")
+        wysokosc = 0
+    if(wysokosc == 0):
         return
-    if (a**2 + c**2) == b**2:
-        print("jest trojkatny")
-        return
-    if (b**2 + c**2) == a**2:
-        print("jest trojkatny")
-        return
-    print("nie jest trojkatny")
-    
-def zad5(a=3, b=5, h=3):
-    print("pole trapezu: ", (a+b)*h/2)
+    if(wysokosc > 10):
+        return print("zbyt duza wysokosc")
+    for i in range(1, wysokosc + 1):
+        print(round(wysokosc - i) * " " + "A"*i + "A" * (i-1))
 
-def zad6(a=1, b=4, ile=2):
-    iloczyn = 1;
-    for i in range(1, ile):
-        iloczyn = iloczyn * a * b**i
-    print(iloczyn)
-
-def zad7():
-    liczba = int(input("podaj liczbe: "))
-    try: {
-    print("pierwiastek: ", math.sqrt(liczba))
-    }
-    except: {
-    print("pierwiastek ujemny")
-    }
-    
+def zad5(n):
+    wektor = []
+    for i in range(0, n):
+        wektor.append([])
+        for z in range(0, n):
+            wektor[i].append(int(round(10*random.random(), 0)))
+    print(wektor)
+    for i in range(0, n):
+        suma = 0
+        for z in range(0, n):
+            suma += wektor[i][z]
+        print(suma)
 if __name__ == '__main__':
     zad1()
     zad2()
     zad3()
-    zad4(6,8,10)
-    zad5()
-    zad6()
-    zad7()
+    zad5(6)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
