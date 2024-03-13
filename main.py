@@ -37,6 +37,7 @@ def zad3():
     for i in range(1, wysokosc + 1):
         print(round(wysokosc - i) * " " + "A"*i + "A" * (i-1))
 
+<<<<<<< HEAD
 def zad5(n):
     wektor = []
     for i in range(0, n):
@@ -49,6 +50,23 @@ def zad5(n):
         for z in range(0, n):
             suma += wektor[i][z]
         print(suma)
+=======
+def zad6(a=1, b=4, ile=10):
+    iloczyn = 1;
+    for i in range(1, ile):
+        iloczyn = iloczyn * a * b**i
+    print(iloczyn)
+
+def zad7():
+    liczba = int(input("podaj liczbe: "))
+    try: {
+    print("pierwiastek: ", math.sqrt(liczba))
+    }
+    except: {
+    print("pierwiastek ujemny")
+    }
+    
+>>>>>>> 7ba07babcabcc6ae4b22da21618704286a5fb1b1
 if __name__ == '__main__':
     zad1()
     zad2()
